@@ -1,7 +1,7 @@
-type StateType = Object
+type StateType = any
 type CreateStateType = (nextState: StateType) => StateType
 type SelectorType = (state: StateType) => void
-type OptionListenerType = (curr: any, prev: any) => any
+type OptionListenerType = (curr?: any, prev?: any) => any
 
 export const createStore = (
   createState: CreateStateType
